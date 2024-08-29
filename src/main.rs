@@ -28,10 +28,8 @@ fn main() {
     }
 }
 */
-use std::thread;
-
-fn main() {
-    let mut n = String::new();
+/*
+let mut n = String::new();
 
     std::io::stdin()
         .read_line(&mut n)
@@ -42,11 +40,18 @@ fn main() {
         .parse()
         .expect("Err parse");
 
+*/
+
+use std::thread;
+
+fn main() {
+    let mut n = 10;
+    let _vec_n: Vec<i32> = (1..=n).collect();
+
     let mut handles = vec![];
 
-    for num_1_to_n in 0..n {
+    for num_1_to_n in _vec_n {
         let handle = thread::spawn(move || {
-            
             println!("{}^2 = {}", num_1_to_n, num_1_to_n * num_1_to_n);
         });
         handles.push(handle);
