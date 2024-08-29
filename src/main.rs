@@ -44,7 +44,7 @@ let mut n = String::new();
 use std::thread;
 
 fn main() {
-    let n = 10;
+    let n: i32 = 10;
     let _vec_n: Vec<i32> = (1..=n).collect();
 
     let mut handles = vec![];
