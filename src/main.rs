@@ -41,11 +41,10 @@ let mut n = String::new();
         .expect("Err parse");
 
 */
-
 use std::thread;
 
 fn main() {
-    let mut n = 10;
+    let n = 10;
     let _vec_n: Vec<i32> = (1..=n).collect();
 
     let mut handles = vec![];
